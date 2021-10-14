@@ -1,16 +1,21 @@
 package th.ac.ku.shopperAPI.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Type;
+import javax.persistence.*;
+import java.util.UUID;
 
 @Entity // กำหนดว่าใน Database จะสร้างตารางที่ชื่อว่า Admin (ถ้ายังไม่มีตารางชื่อ Admin)
         // และ Map ข้อมูลในตารางมาเป็น Obj ในอัตโนมัติ
 public class Admin {
 
-    @Id // กำหนดว่า Id เป็น Primary Key
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ให้ JPA สร้าง Id ให้
-    private int id;
+//    @Id // กำหนดว่า Id เป็น Primary Key
+//    @GeneratedValue(strategy = GenerationType.IDENTITY) // ให้ JPA สร้าง Id ให้
+
+    @Id
+    @GeneratedValue(generator = "UUID")
+    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(columnDefinition = "CHAR(36)")
+
+    private UUID id;
 
     private String firstName;
     private String lastName;
@@ -18,15 +23,15 @@ public class Admin {
     private String password;
 
 
-      public int getId() {
-          return id;
-      }
+    public UUID getId() {
+        return id;
+    }
 
-      public void setId(int id) {
-          this.id = id;
-      }
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
-      public String getFirstName() {
+    public String getFirstName() {
           return firstName;
       }
 
@@ -57,4 +62,15 @@ public class Admin {
       public void setPassword(String password) {
           this.password = password;
       }
-  }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+}

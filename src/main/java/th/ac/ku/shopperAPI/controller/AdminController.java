@@ -3,11 +3,9 @@ package th.ac.ku.shopperAPI.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import th.ac.ku.shopperAPI.model.Admin;
-import th.ac.ku.shopperAPI.model.User;
 import th.ac.ku.shopperAPI.service.AdminService;
-import th.ac.ku.shopperAPI.service.UserService;
-
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/admin")
@@ -25,22 +23,29 @@ public class AdminController {
 
     @PostMapping // insert
     public Admin create(@RequestBody Admin admin) {
+        System.out.println(admin.toString()); // ดูข้อมูล
         return service.create(admin);
+
     }
 
-//    public UserService getService() {
-//        return service;
-//    }
-//
-//    @GetMapping("/{id}")
-//    public User getUser(@PathVariable int id) {
-//        return service.getUser(id);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public User delete(@PathVariable int id) {
-//        return service.delete(id);
-//    }
+    public AdminService getService() {
+        return service;
+    }
 
+    @GetMapping("/{id}")  // Get ข้อมูลตาม Id
+    public Admin getAdmin(@PathVariable UUID id) {
+        return service.getAdmin(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public Admin delete(@PathVariable UUID id) {
+        return service.delete(id);
+    }
+
+    @PutMapping("/{id}")
+    public Admin update(@PathVariable UUID id,
+                       @RequestBody Admin admin) {
+        return service.update(id, admin);
+    }
 
 }

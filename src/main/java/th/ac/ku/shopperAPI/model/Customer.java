@@ -1,16 +1,19 @@
 package th.ac.ku.shopperAPI.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.*;
+import java.util.UUID;
 
 
 @Entity
-public class User {
+public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(generator = "UUID")
+    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(columnDefinition = "CHAR(36)")
+
+    private UUID id;
 
     private String firstName;
     private String lastName;
@@ -18,15 +21,18 @@ public class User {
     private String username;
     private String password;
 
-    public User() {
+
+
+
+    public Customer() {
 
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
