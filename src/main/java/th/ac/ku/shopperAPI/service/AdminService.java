@@ -49,8 +49,6 @@ public class AdminService {
         if (requestBody.getPassword() != null)
             record.setPassword(requestBody.getPassword());
 
-
-
         repository.save(record); // เก็บลง Database ;return ค่าที่ update เป็นข้อมูลเดียวกับ record
 
         return record;
