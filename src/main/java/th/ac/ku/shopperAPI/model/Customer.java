@@ -2,6 +2,7 @@ package th.ac.ku.shopperAPI.model;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.UUID;
 
 
@@ -13,27 +14,37 @@ public class Customer {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
 
-    private UUID id;
+    private UUID customerId;
 
     private String firstName;
     private String lastName;
     private String address;
     private String username;
     private String password;
-
-
-
+    private ArrayList<Items> itemCart = new ArrayList<>();
 
     public Customer() {
 
     }
 
-    public UUID getId() {
-        return id;
+    public void removeItemFromCart(Items item){
+        itemCart.remove(item);
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void addItemToCart(Items item){
+        itemCart.add(item);
+    }
+
+    public ArrayList<Items> getItemCart() {
+        return itemCart;
+    }
+
+    public UUID getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(UUID customerId) {
+        this.customerId = customerId;
     }
 
     public String getFirstName() {

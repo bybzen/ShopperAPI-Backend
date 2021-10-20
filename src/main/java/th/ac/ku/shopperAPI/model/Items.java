@@ -16,9 +16,9 @@ public class Items {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
 
-    private UUID id;
+    private UUID itemId;
     private String nameProduct;
-    private int prize;
+    private float price;
     private String brand;
     private String size;
     private String type;
@@ -29,20 +29,20 @@ public class Items {
     }
 
 
-    public UUID getId() {
-        return id;
+    public UUID getItemId() {
+        return itemId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setItemId(UUID itemId) {
+        this.itemId = itemId;
     }
 
     public void setNameProduct(String nameProduct) {
         this.nameProduct = nameProduct;
     }
 
-    public void setPrize(int prize) {
-        this.prize = prize;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
     public void setBrand(String brand) {
@@ -61,8 +61,8 @@ public class Items {
         return nameProduct;
     }
 
-    public int getPrize() {
-        return prize;
+    public float getPrice() {
+        return price;
     }
 
     public String getBrand() {
@@ -89,7 +89,7 @@ public class Items {
     public String toString() {
         return "Items{" +
                 "nameProduct='" + nameProduct + '\'' +
-                ", prize=" + prize +
+                ", prize=" + price +
                 ", brand='" + brand + '\'' +
                 ", size='" + size + '\'' +
                 ", type='" + type + '\'' +

@@ -15,7 +15,7 @@ public class Admin {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
 
-    private UUID id;
+    private UUID adminId;
 
     private String firstName;
     private String lastName;
@@ -23,12 +23,12 @@ public class Admin {
     private String password;
 
 
-    public UUID getId() {
-        return id;
+    public UUID getAdminId() {
+        return adminId;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setAdminId(UUID adminId) {
+        this.adminId = adminId;
     }
 
     public String getFirstName() {
@@ -66,7 +66,7 @@ public class Admin {
     @Override
     public String toString() {
         return "Admin{" +
-                "id=" + id +
+                "id=" + adminId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", username='" + username + '\'' +

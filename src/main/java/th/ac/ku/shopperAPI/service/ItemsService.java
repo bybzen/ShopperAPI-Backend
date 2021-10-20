@@ -2,7 +2,6 @@ package th.ac.ku.shopperAPI.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import th.ac.ku.shopperAPI.model.Items;
 import th.ac.ku.shopperAPI.repository.ItemsRepository;
 
@@ -43,8 +42,8 @@ public class ItemsService {
         if (requestBody.getNameProduct() != null){
             record.setNameProduct(requestBody.getNameProduct());
         }
-        if (requestBody.getPrize() >= 0){
-            record.setPrize(requestBody.getPrize());
+        if (requestBody.getPrice() >= 0){
+            record.setPrice(requestBody.getPrice());
         }
         if (requestBody.getBrand() != null){
             record.setBrand(requestBody.getBrand());
