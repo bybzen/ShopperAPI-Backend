@@ -43,6 +43,7 @@ public class CustomerService {
         record.setLastName(requestBody.getLastName());
         record.setUsername(requestBody.getUsername());
         record.setPassword(requestBody.getPassword());
+        record.setPhone(requestBody.getPhone());
 
         repository.save(record);
 

@@ -21,6 +21,7 @@ public class Customer {
     private String address;
     private String username;
     private String password;
+    private String phone;
     private ArrayList<Items> itemCart = new ArrayList<>();
 
     public Customer() {
@@ -47,6 +48,10 @@ public class Customer {
         this.customerId = customerId;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -68,7 +73,9 @@ public class Customer {
     }
 
 
-
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
