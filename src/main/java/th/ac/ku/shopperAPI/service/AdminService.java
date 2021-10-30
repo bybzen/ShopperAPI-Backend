@@ -36,7 +36,6 @@ public class AdminService {
     public Admin update(UUID id, Admin requestBody) { // แก้ไขข้อมูล ;ข้อมูลที่จะใส่
         Admin record = repository.findById(id).get(); // ดึงข้อมูลใน Database
 
-
         if (requestBody.getFirstName() != null)
             record.setFirstName(requestBody.getFirstName());
 
