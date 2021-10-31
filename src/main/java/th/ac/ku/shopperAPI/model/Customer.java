@@ -21,15 +21,22 @@ public class Customer {
     private String username;
     private String password;
     private String phone;
-    private CustomerOrder itemCart = new CustomerOrder();
+
+    //fk
+    private String itemCartId;
+//    private CustomerOrder itemCart;
 
     public Customer() {
 
     }
 
 
-    public  CustomerOrder getItemCart() {
-        return itemCart;
+    public String getItemCartId() {
+        return itemCartId;
+    }
+
+    public void setItemCartId(String itemCartId) {
+        this.itemCartId = itemCartId;
     }
 
     public UUID getCustomerId() {

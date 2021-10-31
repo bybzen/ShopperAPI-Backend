@@ -21,6 +21,7 @@ public class Items {
     private float price;
     private String size;
     private int quantity;
+    private String imgSrc;
 
     public Items() {
 
@@ -43,7 +44,13 @@ public class Items {
         this.price = price;
     }
 
+    public String getImgSrc() {
+        return imgSrc;
+    }
 
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
+    }
 
     public void setSize(String size) {
         this.size = size;

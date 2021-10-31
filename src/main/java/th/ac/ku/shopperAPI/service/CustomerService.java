@@ -44,7 +44,6 @@ public class CustomerService {
         record.setUsername(requestBody.getUsername());
         record.setPassword(requestBody.getPassword());
         record.setPhone(requestBody.getPhone());
-
         repository.save(record);
 
         return record;
