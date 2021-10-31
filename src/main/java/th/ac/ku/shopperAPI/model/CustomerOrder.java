@@ -1,30 +1,24 @@
 package th.ac.ku.shopperAPI.model;
 
-import org.hibernate.annotations.Type;
-
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.ArrayList;
-import java.util.UUID;
+//ตะกร้า
 
-public class CustomerOrder {  // ตะกร้าสินค้า
+public class CustomerOrder {
 
-
-    private ArrayList<Items> itemCart = new ArrayList<>();
+    ArrayList<Items> itemList = new ArrayList<>();
 
     public void removeItemFromCart(Items item){
-        itemCart.remove(item);
+        itemList.remove(item);
     }
-
     public void addItemToCart(Items item){
-        itemCart.add(item);
+        itemList.add(item);
     }
 
-    public ArrayList<Items> getItemCart() {
-        return itemCart;
+    public ArrayList<Items> getItemList() {
+        return itemList;
     }
 
-
-
+    public void setItemList(ArrayList<Items> itemList) {
+        this.itemList = itemList;
+    }
 }

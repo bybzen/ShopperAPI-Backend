@@ -21,12 +21,16 @@ public class Customer {
     private String username;
     private String password;
     private String phone;
-    private CustomerOrder customerOrder = new CustomerOrder();
+    private CustomerOrder itemCart = new CustomerOrder();
 
     public Customer() {
+
     }
 
 
+    public  CustomerOrder getItemCart() {
+        return itemCart;
+    }
 
     public UUID getCustomerId() {
         return customerId;
