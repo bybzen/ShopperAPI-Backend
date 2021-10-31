@@ -15,30 +15,18 @@ public class Customer {
     @Column(columnDefinition = "CHAR(36)")
 
     private UUID customerId;
-
     private String firstName;
     private String lastName;
     private String address;
     private String username;
     private String password;
     private String phone;
-    private ArrayList<Items> itemCart = new ArrayList<>();
+    private CustomerOrder customerOrder = new CustomerOrder();
 
     public Customer() {
-
     }
 
-    public void removeItemFromCart(Items item){
-        itemCart.remove(item);
-    }
 
-    public void addItemToCart(Items item){
-        itemCart.add(item);
-    }
-
-    public ArrayList<Items> getItemCart() {
-        return itemCart;
-    }
 
     public UUID getCustomerId() {
         return customerId;
