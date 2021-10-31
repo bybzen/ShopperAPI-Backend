@@ -22,21 +22,14 @@ public class Customer {
     private String username;
     private String password;
     private String phone;
-    private ArrayList<Items> itemCart = new ArrayList<>();
+    private CustomerOrder itemCart;
 
     public Customer() {
 
     }
 
-    public void removeItemFromCart(Items item){
-        itemCart.remove(item);
-    }
 
-    public void addItemToCart(Items item){
-        itemCart.add(item);
-    }
-
-    public ArrayList<Items> getItemCart() {
+    public  CustomerOrder getItemCart() {
         return itemCart;
     }
 
