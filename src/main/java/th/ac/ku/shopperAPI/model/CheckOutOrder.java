@@ -20,7 +20,6 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
     private String nameProduct;
     private float cost; // ราคาจ่ายทั้งหมด
     private String size;
-    private String category; // หมวดหมู่
     private int quantity;
     private String dateTime; //เวลาที่ทำการสั่ง
     private String addressCustomer;
@@ -50,10 +49,6 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
         return size;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -74,10 +69,6 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
         this.size = size;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -91,14 +82,15 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
 
     @Override
     public String toString() {
-        return "PurchaseOrder{" +
-                "nameProduct='" + nameProduct + '\'' +
+        return "CheckOutOrder{" +
+                "purchaseOrderId=" + purchaseOrderId +
+                ", nameProduct='" + nameProduct + '\'' +
                 ", cost=" + cost +
                 ", size='" + size + '\'' +
-                ", category='" + category + '\'' +
                 ", quantity=" + quantity +
                 ", dateTime='" + dateTime + '\'' +
                 ", addressCustomer='" + addressCustomer + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
