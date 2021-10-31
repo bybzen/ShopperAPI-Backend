@@ -19,9 +19,7 @@ public class Items {
     private UUID itemId;
     private String nameProduct;
     private float price;
-    private String brand;
     private String size;
-    private String type;
     private int quantity;
 
     public Items() {
@@ -45,17 +43,13 @@ public class Items {
         this.price = price;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+
 
     public void setSize(String size) {
         this.size = size;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
+
 
     public String getNameProduct() {
         return nameProduct;
@@ -65,17 +59,12 @@ public class Items {
         return price;
     }
 
-    public String getBrand() {
-        return brand;
-    }
 
     public String getSize() {
         return size;
     }
 
-    public String getType() {
-        return type;
-    }
+
 
     public int getQuantity() {
         return quantity;
@@ -89,10 +78,8 @@ public class Items {
     public String toString() {
         return "Items{" +
                 "nameProduct='" + nameProduct + '\'' +
-                ", prize=" + price +
-                ", brand='" + brand + '\'' +
+                ", prize=" + price + '\'' +
                 ", size='" + size + '\'' +
-                ", type='" + type + '\'' +
                 ", quantity=" + quantity +
                 '}';
     }

@@ -45,14 +45,8 @@ public class ItemsService {
         if (requestBody.getPrice() >= 0){
             record.setPrice(requestBody.getPrice());
         }
-        if (requestBody.getBrand() != null){
-            record.setBrand(requestBody.getBrand());
-        }
         if (requestBody.getSize() != null){
             record.setSize(requestBody.getSize());
-        }
-        if (requestBody.getType() != null){
-            record.setType(requestBody.getType());
         }
         if (requestBody.getQuantity() >= 0) {
             record.setQuantity(requestBody.getQuantity());
