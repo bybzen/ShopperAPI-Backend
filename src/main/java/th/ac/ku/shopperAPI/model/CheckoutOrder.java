@@ -6,10 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.ArrayList;
 import java.util.UUID;
 
+
+//ตะกร้า
 @Entity
-public class CheckOutOrder {  // หน้า Check out มั้ง
+public class CheckoutOrder {  // หน้า Check out มั้ง
 
     @Id
     @GeneratedValue(generator = "UUID")
@@ -23,9 +26,13 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
     private int quantity;
     private String dateTime; //เวลาที่ทำการสั่ง
     private String addressCustomer;
-    private String status;
 
-    public CheckOutOrder() {
+
+    //fk
+    private String customerOrderId;
+    private ArrayList<Items> itemList = new ArrayList<>();
+
+    public CheckoutOrder() {
 
     }
 
@@ -80,6 +87,31 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
         this.addressCustomer = addressCustomer;
     }
 
+    public String getCustomerOrderId() {
+        return customerOrderId;
+    }
+
+
+    public void setCustomerOrderId(String customerId) {
+        this.customerOrderId = customerId;
+    }
+
+    public void removeItemFromCart(Items item){
+        itemList.remove(item);
+    }
+    public void addItemToCart(Items item){
+        itemList.add(item);
+    }
+
+    public ArrayList<Items> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(ArrayList<Items> itemList) {
+        this.itemList = itemList;
+    }
+
+
     @Override
     public String toString() {
         return "CheckOutOrder{" +
@@ -90,7 +122,6 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
                 ", quantity=" + quantity +
                 ", dateTime='" + dateTime + '\'' +
                 ", addressCustomer='" + addressCustomer + '\'' +
-                ", status='" + status + '\'' +
                 '}';
     }
 }

@@ -23,7 +23,7 @@ public class Customer {
     private String phone;
 
     //fk
-    private String itemCartId;
+    private String purchaseOrderId;
 //    private CustomerOrder itemCart;
 
     public Customer() {
@@ -31,12 +31,12 @@ public class Customer {
     }
 
 
-    public String getItemCartId() {
-        return itemCartId;
+    public String getPurchaseOrderId() {
+        return purchaseOrderId;
     }
 
-    public void setItemCartId(String itemCartId) {
-        this.itemCartId = itemCartId;
+    public void setPurchaseOrderId(String itemCartId) {
+        this.purchaseOrderId = itemCartId;
     }
 
     public UUID getCustomerId() {
