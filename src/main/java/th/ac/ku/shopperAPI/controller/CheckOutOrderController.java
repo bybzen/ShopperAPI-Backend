@@ -3,48 +3,47 @@ package th.ac.ku.shopperAPI.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import th.ac.ku.shopperAPI.model.CheckoutOrder;
-import th.ac.ku.shopperAPI.service.CheckoutOrderService;
+import th.ac.ku.shopperAPI.model.CheckOutOrder;
+import th.ac.ku.shopperAPI.service.CheckOutOrderService;
 
 import java.util.List;
-import java.util.UUID;
 
 
 @RestController
 @RequestMapping("/checkout")
-public class CheckoutOrderController {
+public class CheckOutOrderController {
     @Autowired
-    private CheckoutOrderService service;
+    private CheckOutOrderService service;
 
 
     @GetMapping
-    public List<CheckoutOrder> getAll() {
+    public List<CheckOutOrder> getAll() {
         return service.getAll();
     }
 
     @PostMapping
-    public CheckoutOrder create(@RequestBody CheckoutOrder checkoutOrder) {
+    public CheckOutOrder create(@RequestBody CheckOutOrder checkoutOrder) {
         return service.create(checkoutOrder);
     }
 
-    public CheckoutOrderService getService() {
+    public CheckOutOrderService getService() {
         return service;
     }
 
     @GetMapping("/{id}")
-    public CheckoutOrder getCheckoutOrder(@PathVariable String id) {
+    public CheckOutOrder getCheckoutOrder(@PathVariable String id) {
         return service.getCheckoutOrder(id);
     }
 
     @DeleteMapping("/{id}")
-    public CheckoutOrder delete(@PathVariable String id) {
+    public CheckOutOrder delete(@PathVariable String id) {
         return service.delete(id);
     }
 
 
     @PutMapping("/{id}")
-    public CheckoutOrder update(@PathVariable String id,
-                           @RequestBody CheckoutOrder checkoutOrder) {
+    public CheckOutOrder update(@PathVariable String id,
+                                @RequestBody CheckOutOrder checkoutOrder) {
         return service.update(id, checkoutOrder);
     }
 

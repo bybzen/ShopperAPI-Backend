@@ -3,48 +3,46 @@ package th.ac.ku.shopperAPI.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import th.ac.ku.shopperAPI.model.CheckoutOrder;
-import th.ac.ku.shopperAPI.model.Customer;
-import th.ac.ku.shopperAPI.repository.CheckoutOrderRepository;
+import th.ac.ku.shopperAPI.model.CheckOutOrder;
+import th.ac.ku.shopperAPI.repository.CheckOutOrderRepository;
 
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
-public class CheckoutOrderService {
+public class CheckOutOrderService {
 
     @Autowired
-    private CheckoutOrderRepository repository;
+    private CheckOutOrderRepository repository;
 
 
-    public List<CheckoutOrder> getAll() {
+    public List<CheckOutOrder> getAll() {
         return repository.findAll();
     }
 
-    public CheckoutOrder create (CheckoutOrder checkoutOrder) {
+    public CheckOutOrder create (CheckOutOrder checkoutOrder) {
         repository.save(checkoutOrder);
         return checkoutOrder;
     }
 
-    public CheckoutOrder getCheckoutOrder(String id) {
+    public CheckOutOrder getCheckoutOrder(String id) {
         return repository.findById(id).get();
     }
 
 
-    public CheckoutOrder delete(String id) {
-        CheckoutOrder record = repository.findById(id).get();
+    public CheckOutOrder delete(String id) {
+        CheckOutOrder record = repository.findById(id).get();
         repository.deleteById(id);
         return record;
     }
 
 
-    public CheckoutOrder update(String id, CheckoutOrder requestBody) {
-        CheckoutOrder record = repository.findById(id).get();
+    public CheckOutOrder update(String id, CheckOutOrder requestBody) {
+        CheckOutOrder record = repository.findById(id).get();
         record.setNameProduct(requestBody.getNameProduct());
         record.setSize(requestBody.getSize());
         record.setQuantity(requestBody.getQuantity());
-        record.setCost(requestBody.getCost());
+        record.setTotal(requestBody.getTotal());
         record.setDateTime(requestBody.getDateTime());
         record.setAddressCustomer(requestBody.getAddressCustomer());
         repository.save(record);

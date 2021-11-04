@@ -12,12 +12,12 @@ import java.util.UUID;
 
 //ตะกร้า
 @Entity
-public class CheckoutOrder {  // หน้า Check out มั้ง
+public class CheckOutOrder {  // หน้า Check out มั้ง
 
     @Id
     private String purchaseOrderId;
     private String nameProduct;
-    private float cost; // ราคาจ่ายทั้งหมด
+    private float total; // ราคาจ่ายทั้งหมด
     private String size;
     private int quantity;
     private String dateTime; //เวลาที่ทำการสั่ง
@@ -26,9 +26,9 @@ public class CheckoutOrder {  // หน้า Check out มั้ง
 
     //fk
     private String username;
-    private ArrayList<Items> itemList = new ArrayList<>();
+//    private ArrayList<Items> itemList = new ArrayList<>();
 
-    public CheckoutOrder() {
+    public CheckOutOrder() {
 
     }
 
@@ -48,8 +48,12 @@ public class CheckoutOrder {  // หน้า Check out มั้ง
         return nameProduct;
     }
 
-    public float getCost() {
-        return cost;
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
     }
 
     public String getSize() {
@@ -68,9 +72,6 @@ public class CheckoutOrder {  // หน้า Check out มั้ง
         this.nameProduct = nameProduct;
     }
 
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
 
     public void setSize(String size) {
         this.size = size;
@@ -96,20 +97,20 @@ public class CheckoutOrder {  // หน้า Check out มั้ง
         this.username = username;
     }
 
-    public void removeItemFromCart(Items item){
-        itemList.remove(item);
-    }
-    public void addItemToCart(Items item){
-        itemList.add(item);
-    }
-
-    public ArrayList<Items> getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(ArrayList<Items> itemList) {
-        this.itemList = itemList;
-    }
+//    public void removeItemFromCart(Items item){S
+//        itemList.remove(item);
+//    }
+//    public void addItemToCart(Items item){
+//        itemList.add(item);
+//    }
+//
+//    public ArrayList<Items> getItemList() {
+//        return itemList;
+//    }
+//
+//    public void setItemList(ArrayList<Items> itemList) {
+//        this.itemList = itemList;
+//    }
 
 
     @Override
@@ -117,7 +118,7 @@ public class CheckoutOrder {  // หน้า Check out มั้ง
         return "CheckOutOrder{" +
                 "purchaseOrderId=" + purchaseOrderId +
                 ", nameProduct='" + nameProduct + '\'' +
-                ", cost=" + cost +
+                ", cost=" + total +
                 ", size='" + size + '\'' +
                 ", quantity=" + quantity +
                 ", dateTime='" + dateTime + '\'' +
