@@ -9,7 +9,7 @@ import th.ac.ku.shopperAPI.model.Customer;
 import java.util.UUID;
 
 @Repository
-public interface CheckoutOrderRepository extends JpaRepository<CheckoutOrder, UUID> {
+public interface CheckoutOrderRepository extends JpaRepository<CheckoutOrder, String> {
 }
 
 

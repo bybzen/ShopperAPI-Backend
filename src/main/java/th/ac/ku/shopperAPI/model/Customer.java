@@ -22,22 +22,13 @@ public class Customer {
     private String password;
     private String phone;
 
-    //fk
-    private String purchaseOrderId;
+
 //    private CustomerOrder itemCart;
 
     public Customer() {
 
     }
 
-
-    public String getPurchaseOrderId() {
-        return purchaseOrderId;
-    }
-
-    public void setPurchaseOrderId(String itemCartId) {
-        this.purchaseOrderId = itemCartId;
-    }
 
     public UUID getCustomerId() {
         return customerId;

@@ -30,19 +30,20 @@ public class CheckoutOrderController {
     public CheckoutOrderService getService() {
         return service;
     }
+
     @GetMapping("/{id}")
-    public CheckoutOrder getCheckoutOrder(@PathVariable UUID id) {
+    public CheckoutOrder getCheckoutOrder(@PathVariable String id) {
         return service.getCheckoutOrder(id);
     }
 
     @DeleteMapping("/{id}")
-    public CheckoutOrder delete(@PathVariable UUID id) {
+    public CheckoutOrder delete(@PathVariable String id) {
         return service.delete(id);
     }
 
 
     @PutMapping("/{id}")
-    public CheckoutOrder update(@PathVariable UUID id,
+    public CheckoutOrder update(@PathVariable String id,
                            @RequestBody CheckoutOrder checkoutOrder) {
         return service.update(id, checkoutOrder);
     }

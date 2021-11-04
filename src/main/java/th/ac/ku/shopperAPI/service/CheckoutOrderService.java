@@ -27,19 +27,19 @@ public class CheckoutOrderService {
         return checkoutOrder;
     }
 
-    public CheckoutOrder getCheckoutOrder(UUID id) {
+    public CheckoutOrder getCheckoutOrder(String id) {
         return repository.findById(id).get();
     }
 
 
-    public CheckoutOrder delete(UUID id) {
+    public CheckoutOrder delete(String id) {
         CheckoutOrder record = repository.findById(id).get();
         repository.deleteById(id);
         return record;
     }
 
 
-    public CheckoutOrder update(UUID id, CheckoutOrder requestBody) {
+    public CheckoutOrder update(String id, CheckoutOrder requestBody) {
         CheckoutOrder record = repository.findById(id).get();
         record.setNameProduct(requestBody.getNameProduct());
         record.setSize(requestBody.getSize());
