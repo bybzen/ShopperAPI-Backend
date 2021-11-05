@@ -27,6 +27,7 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
     private int quantity;
     private String dateTime; //เวลาที่ทำการสั่ง
     private String addressCustomer;
+    private String imgSrc;
 
 
     //fk
@@ -35,6 +36,14 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
 
     public CheckOutOrder() {
 
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
     }
 
     public void setPrice(float price) {
