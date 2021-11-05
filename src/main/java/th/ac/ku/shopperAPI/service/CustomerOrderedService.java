@@ -25,22 +25,26 @@ public class CustomerOrderedService {
         return customerOrdered;
     }
 
-    public CustomerOrdered getCustomerOrdered(String username) {
-        return repository.findById(username).get();
+    public CustomerOrdered getCustomerOrdered(String id) {
+        return repository.findById(id).get();
     }
 
 
-    public CustomerOrdered delete(String username) {
-        CustomerOrdered record = repository.findById(username).get();
-        repository.deleteById(username);
+    public CustomerOrdered delete(String id) {
+        CustomerOrdered record = repository.findById(id).get();
+        repository.deleteById(id);
         return record;
     }
 
 
-    public CustomerOrdered update( String username, CustomerOrdered requestBody) {
-        CustomerOrdered record = repository.findById(username).get();
+    public CustomerOrdered update( String id, CustomerOrdered requestBody) {
+        CustomerOrdered record = repository.findById(id).get();
         record.setPurchaseOrderId(record.getPurchaseOrderId());
         record.setUsername(requestBody.getUsername());
+        record.setNameProduct(record.getNameProduct());
+        record.setPrice(record.getPrice());
+        record.setSize(record.getSize());
+        record.setQuantity(record.getQuantity());
         record.setTotal(record.getTotal());
         record.setStatus(requestBody.getStatus());
         record.setDateTime(record.getDateTime());

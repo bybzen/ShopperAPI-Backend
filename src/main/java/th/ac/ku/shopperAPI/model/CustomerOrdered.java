@@ -8,12 +8,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
 
+//ประวัติ
 @Entity
 public class CustomerOrdered {
 
     @Id
+    private String purchaseOrderId;
     private String username;
-
+    private String nameProduct;
+    private float price;
+    private int quantity;
+    private String size;
 //    @GeneratedValue(generator = "UUID")
 //    @Type(type = "org.hibernate.type.UUIDCharType")
 //    @Column(columnDefinition = "CHAR(36)")
@@ -21,8 +26,15 @@ public class CustomerOrdered {
 
     private String status;
     private String dateTime;
-    private String purchaseOrderId;
     private float total;
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
 
     public String getPurchaseOrderId() {
         return purchaseOrderId;
@@ -30,6 +42,30 @@ public class CustomerOrdered {
 
     public void setTotal(float total) {
         this.total = total;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public float getTotal() {
