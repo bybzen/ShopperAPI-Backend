@@ -1,13 +1,21 @@
 package th.ac.ku.shopperAPI.model;
 
+import org.hibernate.annotations.Type;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.UUID;
 
 @Entity
 public class CustomerOrdered {
 
     @Id
-    private String orderedID;
+    @GeneratedValue(generator = "UUID")
+    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(columnDefinition = "CHAR(36)")
+    private UUID orderedID;
     private String status;
     private String username;
 
@@ -19,11 +27,11 @@ public class CustomerOrdered {
         this.username = username;
     }
 
-    public void setOrderedID(String orderedID) {
+    public void setOrderedID(UUID orderedID) {
         this.orderedID = orderedID;
     }
 
-    public String getOrderedID() {
+    public UUID getOrderedID() {
         return orderedID;
     }
 

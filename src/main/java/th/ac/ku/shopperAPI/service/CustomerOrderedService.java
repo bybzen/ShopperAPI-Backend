@@ -2,10 +2,12 @@ package th.ac.ku.shopperAPI.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import th.ac.ku.shopperAPI.model.CustomerOrdered;
 import th.ac.ku.shopperAPI.repository.CustomerOrderedRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CustomerOrderedService {
@@ -23,19 +25,19 @@ public class CustomerOrderedService {
         return customerOrdered;
     }
 
-    public CustomerOrdered getCustomerOrdered(String id) {
+    public CustomerOrdered getCustomerOrdered(@PathVariable UUID id) {
         return repository.findById(id).get();
     }
 
 
-    public CustomerOrdered delete(String id) {
+    public CustomerOrdered delete(@PathVariable UUID id) {
         CustomerOrdered record = repository.findById(id).get();
         repository.deleteById(id);
         return record;
     }
 
 
-    public CustomerOrdered update(String id, CustomerOrdered requestBody) {
+    public CustomerOrdered update(@PathVariable UUID id, CustomerOrdered requestBody) {
         CustomerOrdered record = repository.findById(id).get();
         record.setStatus(requestBody.getStatus());
         record.setOrderedID(requestBody.getOrderedID());

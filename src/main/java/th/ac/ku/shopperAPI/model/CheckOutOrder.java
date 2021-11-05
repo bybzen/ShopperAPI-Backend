@@ -15,8 +15,13 @@ import java.util.UUID;
 public class CheckOutOrder {  // หน้า Check out มั้ง
 
     @Id
-    private String purchaseOrderId;
+    @GeneratedValue(generator = "UUID")
+    @Type(type = "org.hibernate.type.UUIDCharType")
+    @Column(columnDefinition = "CHAR(36)")
+    private UUID purchaseOrderId;
+
     private String nameProduct;
+    private float price;
     private float total; // ราคาจ่ายทั้งหมด
     private String size;
     private int quantity;
@@ -32,7 +37,15 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
 
     }
 
-    public void setPurchaseOrderId(String purchaseOrderId) {
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPurchaseOrderId(UUID purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
     }
 
@@ -40,7 +53,7 @@ public class CheckOutOrder {  // หน้า Check out มั้ง
         return addressCustomer;
     }
 
-    public String getPurchaseOrderId() {
+    public UUID getPurchaseOrderId() {
         return purchaseOrderId;
     }
 

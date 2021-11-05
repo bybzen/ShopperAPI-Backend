@@ -9,6 +9,7 @@ import th.ac.ku.shopperAPI.service.CheckOutOrderService;
 import th.ac.ku.shopperAPI.service.CustomerOrderedService;
 
 import java.util.List;
+import java.util.UUID;
 
 
 @RestController
@@ -33,18 +34,18 @@ public class CustomerOrderedController {
     }
 
     @GetMapping("/{id}")
-    public CustomerOrdered getCustomerOrdered (@PathVariable String id) {
+    public CustomerOrdered getCustomerOrdered (@PathVariable UUID id) {
         return service.getCustomerOrdered(id);
     }
 
     @DeleteMapping("/{id}")
-    public CustomerOrdered delete(@PathVariable String id) {
+    public CustomerOrdered delete(@PathVariable UUID id) {
         return service.delete(id);
     }
 
 
     @PutMapping("/{id}")
-    public CustomerOrdered update(@PathVariable String id,
+    public CustomerOrdered update(@PathVariable UUID id,
                                 @RequestBody CustomerOrdered customerOrdered) {
         return service.update(id, customerOrdered);
     }
