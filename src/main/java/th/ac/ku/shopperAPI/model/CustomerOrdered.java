@@ -12,12 +12,41 @@ import java.util.UUID;
 public class CustomerOrdered {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "CHAR(36)")
-    private UUID orderedID;
-    private String status;
     private String username;
+
+//    @GeneratedValue(generator = "UUID")
+//    @Type(type = "org.hibernate.type.UUIDCharType")
+//    @Column(columnDefinition = "CHAR(36)")
+//    private Integer orderedID;
+
+    private String status;
+    private String dateTime;
+    private String purchaseOrderId;
+    private float total;
+
+    public String getPurchaseOrderId() {
+        return purchaseOrderId;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setPurchaseOrderId(String purchaseOrderId) {
+        this.purchaseOrderId = purchaseOrderId;
+    }
+
+    public String getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
+    }
 
     public String getUsername() {
         return username;
@@ -27,13 +56,13 @@ public class CustomerOrdered {
         this.username = username;
     }
 
-    public void setOrderedID(UUID orderedID) {
-        this.orderedID = orderedID;
-    }
-
-    public UUID getOrderedID() {
-        return orderedID;
-    }
+//    public void setOrderedID(Integer orderedID) {
+//        this.orderedID = orderedID;
+//    }
+//
+//    public Integer getOrderedID() {
+//        return orderedID;
+//    }
 
     public void setStatus(String status) {
         this.status = status;

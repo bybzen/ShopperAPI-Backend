@@ -7,7 +7,7 @@ import th.ac.ku.shopperAPI.model.CustomerOrdered;
 import java.util.UUID;
 
 @Repository
-public interface CustomerOrderedRepository extends JpaRepository<CustomerOrdered, UUID> {
+public interface CustomerOrderedRepository extends JpaRepository<CustomerOrdered, String > {
 }
 
 

@@ -33,21 +33,21 @@ public class CustomerOrderedController {
         return service;
     }
 
-    @GetMapping("/{id}")
-    public CustomerOrdered getCustomerOrdered (@PathVariable UUID id) {
-        return service.getCustomerOrdered(id);
+    @GetMapping("/{username}")
+    public CustomerOrdered getCustomerOrdered (@PathVariable String username) {
+        return service.getCustomerOrdered(username);
     }
 
-    @DeleteMapping("/{id}")
-    public CustomerOrdered delete(@PathVariable UUID id) {
-        return service.delete(id);
+    @DeleteMapping("/{username}")
+    public CustomerOrdered delete(@PathVariable String username) {
+        return service.delete(username);
     }
 
 
-    @PutMapping("/{id}")
-    public CustomerOrdered update(@PathVariable UUID id,
+    @PutMapping("/{username}")
+    public CustomerOrdered update(@PathVariable String username,
                                 @RequestBody CustomerOrdered customerOrdered) {
-        return service.update(id, customerOrdered);
+        return service.update(username, customerOrdered);
     }
 
 
