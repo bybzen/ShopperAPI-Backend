@@ -2,39 +2,38 @@ version: '3'
 
 services:
 
- docker-mysql:
-   container_name: mysql_shopper
-   image: mysql:latest
-   environment:
-     MYSQL_DATABASE: shopadvisor
-     MYSQL_ROOT_PASSWORD: abc123
-   expose:
-     - 3306
-   ports:
-     - 3307:3306
-   networks:
-     - shopadvisor-network
-   restart: always
+  docker-mysql:
+    container_name: mysql_shopper
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: shopperdb
+      MYSQL_ROOT_PASSWORD: abc123
+    expose:
+      - 3306
+    ports:
+      - 3307:3306
+    networks:
+      - bank-network
+    restart: always
 
- shopper-api:
-   restart: on-failure
-   container_name: shopper-api
-   build:
-     context: .
-     dockerfile: shopper-api.dockerfile
-   image: shopper-api:latest
-   expose:
-     - 8091
-   ports:
-     - 8090:8091
-   networks:
-     - shopadvisor-network
-   environment:
-     SPRING_DATASOURCE_URL: jdbc:mysql://mysql_shopper:3306/shopadvisor
-   depends_on:
-     - docker-mysql
+  shopper-api:
+    restart: on-failure
+    container_name: shopper-api
+    build:
+      context: .
+      dockerfile: shopper-api.dockerfile
+    image: shopper-api:latest
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    networks:
+      - bank-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/shopperdb
+    depends_on:
+      - docker-mysql
 
 networks:
- shopadvisor-network:
-   driver: bridge
-
+  bank-network:
+    driver: bridge

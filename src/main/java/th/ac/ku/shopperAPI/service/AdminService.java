@@ -20,10 +20,40 @@ public class AdminService {
         return repository.findAll(); //
     }
 
-    public Admin create (Admin admin) { // ส่ง Odj Admin
+        public Admin create(Admin admin) { // ส่ง Odj Admin
+//        Admin record = repository.findById(id).get();
         repository.save(admin); // insert or update to repository
+//        admin.setFirstName("admin02");
+//        admin.setLastName("shopper02");
+//        admin.setUsername("admin02");
+//        admin.setPassword("2222");
+//        repository.save(admin);
         return admin;
     }
+
+//    public Admin create(Admin admin) { // ส่ง Odj Admin
+////        Admin record = repository.findById(id).get();
+////        repository.save(admin); // insert or update to repository
+//        admin.setFirstName("admin02");
+//        admin.setLastName("shopper02");
+//        admin.setUsername("admin02");
+//        admin.setPassword("2222");
+//        repository.save(admin);
+//        return admin;
+//    }
+
+//    public Admin create(UUID id,Admin admin) { // แก้ไขข้อมูล ;ข้อมูลที่จะใส่
+//        Admin record = repository.findById(id).get(); // ดึงข้อมูลใน Database
+//        record.setFirstName("admin02");
+//        record.setLastName("shopper02");
+//        record.setUsername("admin02");
+//        record.setPassword("2222");
+//        repository.save(record); // เก็บลง Database ;return ค่าที่ update เป็นข้อมูลเดียวกับ record
+//        return record;
+//    }
+
+
+
 
     public Admin getAdmin(UUID id) {
         return repository.findById(id).get();
@@ -37,7 +67,6 @@ public class AdminService {
 
     public Admin update(UUID id, Admin requestBody) { // แก้ไขข้อมูล ;ข้อมูลที่จะใส่
         Admin record = repository.findById(id).get(); // ดึงข้อมูลใน Database
-
         if (requestBody.getFirstName() != null)
             record.setFirstName(requestBody.getFirstName());
 
