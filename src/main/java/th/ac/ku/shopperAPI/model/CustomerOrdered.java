@@ -19,14 +19,23 @@ public class CustomerOrdered {
     private float price;
     private int quantity;
     private String size;
+    private String imgSrc;
 //    @GeneratedValue(generator = "UUID")
 //    @Type(type = "org.hibernate.type.UUIDCharType")
 //    @Column(columnDefinition = "CHAR(36)")
 //    private Integer orderedID;
 
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
     private String status;
     private String dateTime;
     private float total;
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
+    }
 
     public String getSize() {
         return size;
