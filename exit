@@ -1,0 +1,158 @@
+[33mcommit f7a1548fd454c454e8bb85ca75d35edc7d61e456[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Nov 7 17:09:59 2021 +0700
+
+    edit app.prooerties
+
+[33mcommit 8bfe9d32004a5e3a0147fc7098d9729995958b2c[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/masterbranch[m[33m, [m[1;31mheroku/main[m[33m, [m[1;32mmasterbranch[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Nov 7 01:37:15 2021 +0700
+
+    edit application.properties
+
+[33mcommit e871838429fe93d4c7a5bf3aa1698d7ef7a30fe2[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Nov 7 01:29:55 2021 +0700
+
+    edit application.properties
+
+[33mcommit fe1465c99d109c2ff0c7ff43013bdb2cd238594b[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Nov 7 01:18:22 2021 +0700
+
+    add postgres
+
+[33mcommit d100997bc9ab20d5ff81bd867c79a4551fca7635[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sat Nov 6 19:15:11 2021 +0700
+
+    add imgSrc
+
+[33mcommit 00d22bf7ac973a7562c1e6de357fa4d68c343864[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Fri Nov 5 23:43:57 2021 +0700
+
+    edit class CustomerOrdered
+
+[33mcommit 327a067247669b69e55c1b1137ff4375264981f0[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Fri Nov 5 22:33:10 2021 +0700
+
+    edit,add attribute in CustomerOrdered
+
+[33mcommit 18619db1f758a158ffb4763623babd764a26fc14[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Fri Nov 5 16:35:23 2021 +0700
+
+    add attribute img
+
+[33mcommit a6730537c21e5f7553358ae11622eaebd27a9d78[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Fri Nov 5 15:30:16 2021 +0700
+
+    edit UUID in CheckOutOrder,CustomerOrdered
+
+[33mcommit a66f85f1aafa97ccd91b0b969e231711ab2d9e4e[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Thu Nov 4 23:37:49 2021 +0700
+
+    create class CustomerOrdered service
+
+[33mcommit 3ffaa5e8abdf82e96defde86fc5f7922e48aa438[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Thu Nov 4 22:36:54 2021 +0700
+
+    edit CheckoutOrder
+
+[33mcommit 4cca34cc51713bf731ae95b97753220bd778bb90[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Mon Nov 1 22:55:48 2021 +0700
+
+    change and edit class customerOrder to class CheckoutOrder
+
+[33mcommit a8bc7fcba8496cf6e3a1316a159f1f12c904ac95[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Mon Nov 1 01:25:53 2021 +0700
+
+    create CustomerOrder service,repository,controller
+
+[33mcommit a1e7595bae1100b39eb25bb8eb404ca766521feb[m
+Merge: eaa8f3c e3ac6fe
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Sun Oct 31 23:39:47 2021 +0700
+
+    Edit class Customer
+
+[33mcommit eaa8f3c0da5776053c129ca9dd996db91c9da7cf[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Sun Oct 31 23:22:01 2021 +0700
+
+    Create class CheckOutOrder
+
+[33mcommit e3ac6fe3124e469326673bf784dd529f7774ae30[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Oct 31 23:18:39 2021 +0700
+
+    edit attribute item
+
+[33mcommit a085b8a15b67651ace9a3366c1c4ed015182df58[m
+Merge: 9f6fcdd 6bf0085
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Sun Oct 31 23:01:32 2021 +0700
+
+    Merge branch 'master' of https://github.com/bybzen/ShopperAPI-Backend
+
+[33mcommit 9f6fcdd0bb19898261729fcf68f832b13abb323a[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Sun Oct 31 23:01:13 2021 +0700
+
+    Add class customer order
+
+[33mcommit 6bf0085c7ca79866030bfffbf6bc9f7b4d02f546[m
+Merge: 41f313d 369eaad
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Oct 31 22:39:48 2021 +0700
+
+    Merge https://github.com/bybzen/ShopperAPI-Backend
+
+[33mcommit 41f313d9b210a1ee5ac5cf81f020b632e1dd74ea[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Sun Oct 31 22:29:14 2021 +0700
+
+    edit items class
+
+[33mcommit 369eaada21d9d97f64db8a93cb5dccaee7d68433[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Sat Oct 30 21:39:50 2021 +0700
+
+    Change port 8090 --> 8080
+
+[33mcommit db7713d70ed1dca4a0315e5404fde34e8361cc01[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Fri Oct 29 22:19:39 2021 +0700
+
+    Add field phone customer
+
+[33mcommit 2ad18905ab54a917c831d788aef4e8b3c44f16fa[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Wed Oct 20 23:31:24 2021 +0700
+
+    Create Class Items, Storage, CheckOut
+
+[33mcommit 0cd9a73661e5729947186e1b0b730c699e3f5680[m
+Author: Rawisara M <rawisara.m@ku.th>
+Date:   Wed Oct 20 20:57:53 2021 +0700
+
+    create items,controller,service,repository
+
+[33mcommit bad8dc6c27e8c0c4c3a0e29b4cf2dd6af261a9fd[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Thu Oct 14 23:20:29 2021 +0700
+
+    Create Class Product and PurchaseOrder
+
+[33mcommit 900c56de6c7c61d9429ddb530f7967f28c334313[m
+Author: Thankorn Rattrakulthip <thanakorn.ratt@ku.th>
+Date:   Wed Oct 13 02:19:34 2021 +0700
+
+    create Class Admin, Controller Admin, Repository Admin
