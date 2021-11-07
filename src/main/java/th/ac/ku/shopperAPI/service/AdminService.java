@@ -11,8 +11,6 @@ import java.util.UUID;
 @Service
 public class AdminService {
 
-
-
     @Autowired
     private AdminRepository repository;
 
